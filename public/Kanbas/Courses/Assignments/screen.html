@@ -1,5 +1,532 @@
-<table width="100%" border="1">
-    <tr>
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="index.css" />
+<link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+
+
+<div class="row">
+    <div class="col-1">
+        <ul class="wd-kanbas-navigation">
+            <li>
+                <a  href="/Kanbas/Account/Profile/screen.html">
+                    <i class="fa fa-solid fa-user" style="color:  #726d6d9b;"></i>
+                    Account
+                  </a>
+            </li>
+            <li><a href="/Kanbas/Dashboard/screen.html">
+                <i class="fa fa-stopwatch"></i>
+                Dashboard</a></li>
+            <li  class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
+                <i class="fa fa-book"></i>
+                Courses</a></li>
+            <li><a href="#">
+                <i class="fa fa-calendar"></i>
+                Calendar</a></li>
+            <li><a href="#">
+                <i class="fa fa-envelope-open-text"></i>
+                Inbox</a></li>
+            <li><a href="#">
+                <i class="fa fa-regular fa-clock"></i>
+                History</a></li>
+            <li><a href="#">
+                <i class="fa fa-desktop"></i>
+                Studio</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-share"></i>
+                    Commons</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-question"></i><br>
+                    Help
+                </a>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+
+    <div class="col-11">
+        <div class="row" style="margin: 30px;">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="wd-hyper-link-red">CS5610.WebDev.05</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                    </ol>
+                </nav>
+            </div>
+            <hr>
+        </div>
+
+
+        <div class="row">
+            <div class="col-1">
+                <ul class="wd-course-navigation">
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li class="wd-active"><a href="/Kanbas/Courses/Assignments/screen.html">Assigments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rurics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a></li>
+                </ul>  
+            </div>
+
+            <div class="col-11">
+                <div class="ms-3 p-5">
+                    <div class="row">
+                        <div class="col-12">
+                            
+                            <div class="float-end">
+                                <button class="btn btn-secondary">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    Group</button>
+                                <button class="btn btn-danger">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    Assigment</button>
+                                <!-- <span><select class="form-control"><option>Edit Assigment Dates</option></select></span> -->
+                                
+
+                                <span class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Edit Assigment Dates
+                                    </button>
+                                </span>
+                                
+                            </div>
+                            <input class="form-control w-25" type="text" placeholder="search for assigments">
+                            <hr>
+                        </div>
+                        <div class="row" style="height: 50px">
+                            <div class="col-12 pb-1 mb-1">
+                                <div class="wd-float-left">
+                                    <h3>Assigment</h3>
+                                </div>
+                            
+                                <div class="wd-float-right">
+                                    <button type="button" class="rounded-pill">40% of Total</button>
+                                    <select>
+                                        <option>Edit</option>
+                                        <option>Speed Grader</option>
+                                        <option>Duplicate</option>
+                                        <option>Delete</option>
+                                        <option>Move to</option>
+                                        <option>Send to</option>
+                                        <option>Copy to</option>
+                                        <option>Share to Commons</option>
+                                    </select>
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            
+                                </div>
+                            </div>
+                        </div>
+                
+                
+                        <div class="row">
+                            <div class="col-12 pb-1 mb-1">
+                        <div class="wd-left-border-green">
+                            
+                            <ul class="list-special list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <i class="fa fa-calculator" aria-hidden="true"></i>
+                                        <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">A1 - EVN + HTML</a>
+                                        <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                    </div>
+                                    <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <i class="fa fa-calculator" aria-hidden="true"></i>
+                                        <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">A2 - CSS + BOOTSTRAP</a>
+                                        <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                    </div>
+                                    <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <i class="fa fa-calculator" aria-hidden="true"></i>
+                                        <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">A3 - JS + REACT</a>
+                                        <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                    </div>
+                                    <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <i class="fa fa-calculator" aria-hidden="true"></i>
+                                        <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">A4 - STATE + REDUX</a>
+                                        <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                    </div>
+                                    <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <i class="fa fa-calculator" aria-hidden="true"></i>
+                                        <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">A5 - NODE + SESSION</a>
+                                        <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                    </div>
+                                    <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <i class="fa fa-calculator" aria-hidden="true"></i>
+                                        <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">A6 - MONGO + MOGOOSE</a>
+                                        <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                    </div>
+                                    <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row" style="height: 50px">
+                        <div class="col-12 pb-1 mb-1">
+                            <div class="wd-float-left">
+                                <h3>QUIZZES</h3>
+                            </div>
+                        
+                            <div class="wd-float-right">
+                                <button type="button" class="rounded-pill">10% of Total</button>
+                                <select>
+                                    <option>Edit</option>
+                                    <option>Speed Grader</option>
+                                    <option>Duplicate</option>
+                                    <option>Delete</option>
+                                    <option>Move to</option>
+                                    <option>Send to</option>
+                                    <option>Copy to</option>
+                                    <option>Share to Commons</option>
+                                </select>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="row">
+                        <div class="col-12 pb-1 mb-1">
+                    <div class="wd-left-border-green">
+                        
+                        <ul class="list-special list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Q1 - EVN + HTML</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+            
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Q2 - CSS + BOOTSTRAP</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Q3 - JS + REACT</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Q4 - STATE + REDUX</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Q5 - MONGO</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">A6 - MONGO + MOGOOSE</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+                    
+
+
+                    <div class="row" style="height: 50px">
+                        <div class="col-12 pb-1 mb-1">
+                            <div class="wd-float-left">
+                                <h3>Exam</h3>
+                            </div>
+                        
+                            <div class="wd-float-right">
+                                <button type="button" class="rounded-pill">20% of Total</button>
+                                <select>
+                                    <option>Edit</option>
+                                    <option>Speed Grader</option>
+                                    <option>Duplicate</option>
+                                    <option>Delete</option>
+                                    <option>Move to</option>
+                                    <option>Send to</option>
+                                    <option>Copy to</option>
+                                    <option>Share to Commons</option>
+                                </select>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="row">
+                        <div class="col-12 pb-1 mb-1">
+                    <div class="wd-left-border-green">
+                        
+                        <ul class="list-special list-group">
+
+            
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Midterm</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Final</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+                    <div class="row" style="height: 50px">
+                        <div class="col-12 pb-1 mb-1">
+                            <div class="wd-float-left">
+                                <h3>Project</h3>
+                            </div>
+                        
+                            <div class="wd-float-right">
+                                <button type="button" class="rounded-pill">30% of Total</button>
+                                <select>
+                                    <option>Edit</option>
+                                    <option>Speed Grader</option>
+                                    <option>Duplicate</option>
+                                    <option>Delete</option>
+                                    <option>Move to</option>
+                                    <option>Send to</option>
+                                    <option>Copy to</option>
+                                    <option>Share to Commons</option>
+                                </select>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="row">
+                        <div class="col-12 pb-1 mb-1">
+                    <div class="wd-left-border-green">
+                        
+                        <ul class="list-special list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                
+                                <div>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <a class="wd-assignment-big-title" href="/Kanbas/Courses/Assignments/AssigmentEdit/screen.html">Project</a>
+                                    <br \><a class="wd-assignment-small-title" href="#">Multiple Modules | 100pts</a>
+                                </div>
+                                <span><i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </span>
+                            </li>
+            
+                            
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+        
+                   
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col"></div>
         <td valign="top">
             <ul>
                 <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
@@ -154,4 +681,4 @@
         </td>
 
     </tr>
-</table>
+</table> -->

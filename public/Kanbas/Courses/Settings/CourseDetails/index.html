@@ -1,0 +1,252 @@
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../index.css" />
+<link href="../../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+
+
+<div class="ms-3 p-5 ml-200">
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/Kanbas/Courses/Settings/CourseNavigation/screen.html">Course Details</a>
+        </li>
+
+        <li class="nav-item red">
+        <a class="nav-link" href="#">Section</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="/Kanbas/Courses/Settings/CourseNavigation/index.html">Navigation</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" ahref="#">Apps</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" ahref="#">Feature Options</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" ahref="#">Integrations</a>
+        </li>
+    </ul>
+
+    <h2>Course Details</h2>
+
+    <div class="row">
+        <div class="col">
+            <label for="photo">Image:</label>
+        </div>
+        <div class="col-9">
+            <input 
+                        type="file"
+                        id="photo" 
+                        name="photo"
+                        accept="image/png, image/jpeg"
+                        class="form-control"
+                        >
+            
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Name:
+        </div>
+        <div class="col-9">
+            CS5610 17367 Web Development SEC 02 Fall 2023 [VTL-2-OL]
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Course Code:
+        </div>
+        <div class="col-9">
+            CS5610 17367
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Blueprint Course:
+        </div>
+        <div class="col-9">
+            No
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Course Template:
+        </div>
+        <div class="col-9">
+            <input type="checkbox" id="enable"> <label for="enable">Enable course as a Course Template</label>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Time Zone:
+        </div>
+        <div class="col-9">
+            <input type="date" class="form-control">
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            SIS ID:
+        </div>
+        <div class="col-9">
+            CS5610 17367
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Subaccount:
+        </div>
+        <div class="col-9 wd-red">
+            CS Graduate
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Term:
+        </div>
+        <div class="col-9">
+            202410_1 Fall 2023 Semester Full Term
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Participation
+        </div>
+        <div class="col-9">
+            <div>
+                <select class="form-control"><option >Term</option></select>
+                <p>Course participation is limited to term start and end dates</p>
+                <h6>Start</h6>
+                <input class="form-control" type="date">
+                <h6>End</h6>
+                <input class="form-control" type="date">
+
+                <input type="checkbox" id="start">
+                <label for="start">Restrict students from viewing course before term start date</label><br>
+                <input type="checkbox" id="end">
+                <label for="end">Restrict students from viewing course before term end date</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Default due time:
+        </div>
+        <div class="col-9">
+            <input type="date" class="form-control">
+            <p>This influence the user interface for setting due dates.</p>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Language:
+        </div>
+        <div class="col-9">
+            <select class="form-control"><option>Not Set(defualt to English)</option></select>
+            This will override any user/system language preference.
+            
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            File Storage
+        </div>
+        <div class="col-9">
+            10000 megabytes
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Large Course:
+        </div>
+        <div class="col-9">
+            <input type="checkbox" id="launch">
+            <label for="launch">Launch SpeedGrader Filtered by Student Group
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Grading Scheme:
+        </div>
+        <div class="col-9">
+            <input type="checkbox" id="grading">
+            <label for="grading">Enable course grading scheme</label>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            License:
+        </div>
+        <div class="col-9">
+            <select class="form-control"><option>Private (Copyrighted)</option></select>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Visibiliy:
+        </div>
+        <div class="col-9">
+            <p>If you need to make your course public please contact your admin/support</p>
+            <select ><option>Course</option></select><br>
+            <input type="checkbox" id="include">
+            <label for="include">Include this course in the public course</label>
+            
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Format:
+        </div>
+        <div class="col-9">
+            <select class="form-control"><option>On-Campus</option></select>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Mastery Paths:
+        </div>
+        <div class="col-9">
+            <input type="checkbox" id="individual">
+            <label for="individual">Enable individual learning paths for students based on assessment</label> 
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            Description:
+        </div>
+        <div class="col-9">
+            <textarea cols="30" rows="10" class="form-control"></textarea> 
+            <p class="wd-red"> more options</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="float-end">
+        <button class="btn btn-danger">Update Course Details</button>
+    </div>
+</div>

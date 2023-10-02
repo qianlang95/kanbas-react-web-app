@@ -1,56 +1,95 @@
-<select>
-    <option>Gradebook</option>
-</select>
-<button>Import</button>
-<select>
-    <option>Export</option>
-</select>
-<button>Configure</button>
-<h1>Student Names</h1>
-<input type="text" placeholder="Search Students">
-<h1>Assigment Names</h1>
-<input type="text" placeholder="Search Assignments"> <br />
-<br />
-<button>Apply Filters</button><br />
-<br />
-<table width="100%" border="1">
-    <thead></thead>
-        <tr>
-            <th>Student Name</th>
-            <th>HTML</th>
-            <th>CSS</th>
-            <th>JavaScript</th>
-            <th>React</th>
-        </tr>
-    <tbody>
-        <tr>
-            <td>Bob</td>
-            <td><input type="text" value="98"></td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-        </tr>
-        <tr>
-            <td>Helen</td>
-            <td>100</td>
-            <td><input type="text" value="97"></td>
-            <td>100</td>
-            <td>100</td>
-        </tr>
-        <tr>
-            <td>Jessa</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-        </tr>
-        <tr>
-            <td>Jacob</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-        </tr>
-    </tbody>
+<link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 
-</table>
+<!-- <select>
+    <option>Gradebook</option>
+</select> -->
+<!-- <div class="row">
+    <div class="col-12">
+        <div class="float-end">
+            <button><i class="fa fa-pen" aria-hidden="true"></i>Import</button>
+            <select class="form-control">
+                <option><i class="fa fa-arrow-left" aria-hidden="true"></i>Export</option>
+            </select>
+            <button id="edit"><i class="fa fa-cog" aria-hidden="true"></i></button>
+
+        </div>
+    </div>
+</div> -->
+<div class="ms-3 p-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="float-end">
+                <button type="button" class="btn btn-secondary"><i class="fa fa-arrow-right" aria-hidden="true"></i>  Import</button>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>  Export</button>
+                <button class="btn btn-secondary">
+                    <i class="fa fa-cog" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div mb-4>
+        <div class="row mb-3">
+            <div class="col">Student Names</div>
+            <div class="col">Assigment Names</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" placeholder="Search Students" class="form-control">
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Search Assignments" class="form-control">
+            </div>
+        </div>
+    </div>
+
+
+    <button class="btn btn-secondary">Apply Filters</button>
+
+
+    <div class="table-responsive mt-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>JavaScript</th>
+                    <th>React</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bob</td>
+                    <td><input type="text" value="98"></td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Helen</td>
+                    <td>100</td>
+                    <td><input type="text" value="97"></td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Jessa</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Jacob</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
