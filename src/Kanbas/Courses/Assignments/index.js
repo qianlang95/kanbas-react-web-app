@@ -101,6 +101,7 @@ function Assignments() {
                 </button>
                 <br />
                 Multiple Modules | 100pts | start: {cur_assignment.availableFromDate.toString()} | end: {cur_assignment.availableUntilDate.toString()}
+                    <br/>
                     {cur_assignment.description}
                 </div>
 
