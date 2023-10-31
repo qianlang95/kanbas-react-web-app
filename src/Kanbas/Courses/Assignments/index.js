@@ -1,13 +1,42 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
+import assignmentsReducer from "./assignmentsReducer";
+import { useSelector, useDispatch } from "react-redux";
+import "./index.css";
+import Dialog from "./Dialog";
+
+import { addAssignment, deleteAssignment, updateAssignment, setAssignment } from "./assignmentsReducer";
 
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignments = db.assignments;
+    // const assignments = db.assignments;
+    const idAssRef = useRef();
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+    const dispatch = useDispatch();
+
+    
     const courseAssignments = assignments.filter(
       (assignment) => assignment.course === courseId);
+
+      const [dialog, setDialog] = useState( false);
+
+      const handleDelete = (id) => {
+        setDialog(true);
+        idAssRef.current = id;
+      };
+    
+      const areUSureDelete = (choose) => {
+        if (choose) {
+          dispatch(deleteAssignment(idAssRef.current))
+          setDialog(false);
+        } else {
+          setDialog(false);  }
+      };
+      
+      
     return (
       <div>
 
@@ -16,9 +45,9 @@ function Assignments() {
                                 <button class="btn btn-secondary">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                     Group</button>
-                                <button class="btn btn-danger">
-                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                    Assigment</button>
+                                <Link class="btn btn-danger" 
+                                 to={`/Kanbas/Courses/${courseId}/Assignments/addNewAssignment/${new Date().getTime().toString()}`}>
+                                    +Assigment</Link>
                                 
 
                                 <span class="dropdown">
@@ -36,18 +65,63 @@ function Assignments() {
 
 
         <h2>Assignments for course {courseId}</h2>
-        <div className="list-group">
-          {courseAssignments.map((assignment) => (
-            <Link
-              key={assignment._id}
-              to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-              className="list-group-item">
-              {assignment.title}
-              <br />
-              Multiple Modules | 100pts
-            </Link>
+        <ul className="list-group">
+        <li className="list-group-item">
+
+          {
+            courseAssignments.map((cur_assignment, index) => (
+
+                <>
+                <div className="wd-dis">
+                <button
+                className="btn btn-warning float-end"
+                // onClick={() => dispatch(deleteAssignment(cur_assignment._id))}
+                onClick={() => handleDelete(cur_assignment._id)}
+                >
+                Delete
+              </button>
+              
+              
+
+
+              <button onClick={() => dispatch(setAssignment(cur_assignment))} className="wd-button">
+                  <Link
+                    key={cur_assignment._id}
+                    to={`/Kanbas/Courses/${courseId}/Assignments/${cur_assignment._id}`}
+                    className="wd-link"
+                    >
+
+
+                    {/* {cur_assignment._id} */}
+                    {cur_assignment.title}
+
+                   
+                   
+                  </Link>
+                </button>
+                <br />
+                Multiple Modules | 100pts | start: {cur_assignment.availableFromDate.toString()} | end: {cur_assignment.availableUntilDate.toString()}
+                    {cur_assignment.description}
+                </div>
+
+
+                {dialog && (
+                  <Dialog
+                    //Update
+                    onDialog={areUSureDelete}
+                  />
+      )}
+
+
+
+                </>
           ))}
-        </div>
+          </li>
+        </ul>
+
+
+
+        
       </div>
     );
   }

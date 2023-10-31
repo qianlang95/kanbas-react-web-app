@@ -1,0 +1,23 @@
+.wd-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
+}
+
+
+.wd-link {
+    color: black;
+    text-decoration: none;
+
+}
+
+
+.wd-dis {
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

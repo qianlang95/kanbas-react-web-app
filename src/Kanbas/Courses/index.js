@@ -5,14 +5,15 @@ import "./index.css";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
-import AssignmentEditor from "./Assignments/AssignmentEditor";
+import AssignmentEditor from "./Assignments/AssignmentEditor/editor";
+import AssignmentAddEditor from "./Assignments/AssignmentEditor/index";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }) {
     const { courseId } = useParams();
     const {pathname} = useLocation();
-    const [empty, kanbas, courses, id, screen] = pathname.split("/");
-    const course = db.courses.find((course) => course._id === courseId);
+    const [empty, kanbas, coursess, id, screen] = pathname.split("/");
+    const course = courses.find((course) => course._id === courseId);
   return (
     <div>
       {/* <h1>Courses {course.name} / {screen}</h1> */}
@@ -36,6 +37,10 @@ function Courses() {
             <Route path="Home" element={<Home/>} />
             <Route path="Modules" element={<Modules/>} />
             <Route path="Assignments" element={<Assignments/>} />
+            <Route
+              path="Assignments/addNewAssignment/:assignmentId"
+              element={<AssignmentAddEditor/>}
+            />
             <Route
               path="Assignments/:assignmentId"
               element={<AssignmentEditor/>}
