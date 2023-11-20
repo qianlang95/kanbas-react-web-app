@@ -1,12 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import assignmentsReducer from "./assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
 import "./index.css";
 import Dialog from "./Dialog";
+import * as client from "./client";
 
-import { addAssignment, deleteAssignment, updateAssignment, setAssignment } from "./assignmentsReducer";
+
+import { addAssignment, deleteAssignment, updateAssignment, setAssignment, setAssignments } from "./assignmentsReducer";
+import { add } from "../../../Labs/a4/ReduxExamples/AddRedux/addReducer";
 
 
 function Assignments() {
@@ -17,7 +20,14 @@ function Assignments() {
     const assignment = useSelector((state) => state.assignmentsReducer.assignment);
     const dispatch = useDispatch();
 
-    
+
+    useEffect(() => {
+      client.findAssignmentsForCourse(courseId)
+        .then((assigments) =>
+          dispatch(setAssignments(assigments))
+      );
+    }, [courseId]);
+
     const courseAssignments = assignments.filter(
       (assignment) => assignment.course === courseId);
 
@@ -27,15 +37,24 @@ function Assignments() {
         setDialog(true);
         idAssRef.current = id;
       };
+
     
       const areUSureDelete = (choose) => {
         if (choose) {
-          dispatch(deleteAssignment(idAssRef.current))
+          // dispatch(deleteAssignment(idAssRef.current))
+          handleDeleteAssignmnt(idAssRef.current)
           setDialog(false);
         } else {
           setDialog(false);  }
       };
       
+      const handleDeleteAssignmnt = (assignmentId) => {
+        console.log(assignmentId,"**************4");
+        client.deleteAssignment(assignmentId).then((status) => {
+          dispatch(deleteAssignment(assignmentId));
+        });
+      };
+
       
     return (
       <div>

@@ -3,6 +3,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import { useSelector, useDispatch } from "react-redux";
 import { addAssignment, deleteAssignment, updateAssignment, setAssignment } from "../assignmentsReducer";
+import * as client from "../client.js";
 
 function AssignmentAddEditor() {
   const { assignmentId } = useParams();
@@ -16,8 +17,15 @@ function AssignmentAddEditor() {
   const navigate = useNavigate();
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
-    dispatch( addAssignment({ ...assignment, course: courseId }));
+    // dispatch( addAssignment({ ...assignment, course: courseId }));
+    handleAddAssignment();
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
+
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
   };
   return (
     <div>
