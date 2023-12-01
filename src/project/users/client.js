@@ -3,7 +3,7 @@ const request = axios.create({
     withCredentials: true,
   });
   
-export const BASE_API = process.env.REACT_APP_API_BASE;
+export const BASE_API = process.env.REACT_APP_API_BASE_A6;
 export const USERS_API = `${BASE_API}/api/users`;
 export const signin = async (credentials) => {
   const response = await request.post( `${USERS_API}/signin`, credentials );
