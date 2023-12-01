@@ -1,6 +1,7 @@
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithObjects from "./WorkingWithObjects";
 import WorkingWithArrays from "./WorkingWithArrays";
+import Quizes from "./quize";
 function Assignment5() {
   const API_BASE = process.env.REACT_APP_API_BASE;
   console.log(API_BASE,"************!!!!API_BASE")
@@ -16,8 +17,12 @@ function Assignment5() {
           </a>
           <EncodingParametersInURLs/>
           <WorkingWithObjects/>
-          <WorkingWithArrays/>
+          <WorkingWithArrays/> 
+
+
+
         </div>
+        <Quizes/>
       </div>
     );
   }
