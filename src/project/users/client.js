@@ -4,9 +4,12 @@ const request = axios.create({
   });
   
 export const BASE_API = process.env.REACT_APP_API_BASE_A6;
+// export const BASE_API = "http://localhost:4000"
 export const USERS_API = `${BASE_API}/api/users`;
 export const signin = async (credentials) => {
+  // console.log("*****USERS_API2", USERS_API);
   const response = await request.post( `${USERS_API}/signin`, credentials );
+  
   return response.data;
 };
 
